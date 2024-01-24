@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  free_items: 1
+  start_date: MyString
+  datetime: MyString
+  expiry_date: 2024-01-24 15:02:06
+
+two:
+  name: MyString
+  code: MyString
+  free_items: 1
+  start_date: MyString
+  datetime: MyString
+  expiry_date: 2024-01-24 15:02:06

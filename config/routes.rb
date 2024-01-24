@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ingredients
+  resources :pizzas
   resources :promotions
   resources :discounts
   resources :orders

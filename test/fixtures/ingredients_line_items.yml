@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_item: one
+  ingredient: one
+  type: 1
+
+two:
+  line_item: two
+  ingredient: two
+  type: 1

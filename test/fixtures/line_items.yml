@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order: one
+  pizza: one
+  quantity: 1
+  amount: 9.99
+  size: MyString
+
+two:
+  order: two
+  pizza: two
+  quantity: 1
+  amount: 9.99
+  size: MyString

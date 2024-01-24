@@ -1,0 +1,8 @@
+<div class="nested-fields">
+    <%= f.label :Ingredient %>
+    <%= f.select :ingredient_id, Ingredient.all.map {|i| [i.name ,i.id]} %>
+    <%= f.label :Type %>
+    <%= f.select :type, [['Add', 0], ['Remove', 1]] %>
+    <%= f.check_box :_destroy %>
+    <%#= link_to_remove_association "Remove Ingredient", f %>
+</div>

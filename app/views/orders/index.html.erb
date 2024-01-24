@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div style="margin: 15px;">
+  <ul>
+    <li>
+      <%= link_to "Pizzas", pizzas_path %>
+    </li>
+    <li>
+      <%= link_to "Discounts", discounts_path %>
+    </li>
+    <li>
+      <%= link_to "Promotions", promotions_path %>
+    </li>
+    <li>
+      <%= link_to "Ingredints", ingredients_path %>
+    </li>
+</div>
+
+<h1>Orders</h1>
+<div id="orders">
+  <% @orders.each do |order| %>
+    <%= render order %>
+    <p>
+      <%= button_to 'Complete', order_path(order.id),params: {order: {status: :completed}}, :method => :patch %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New order", new_order_path %>
