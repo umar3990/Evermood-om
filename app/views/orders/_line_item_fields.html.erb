@@ -1,0 +1,22 @@
+<div class="nested-fields">
+    <%= f.label :Pizza %>
+    <%= f.select :pizza_id, Pizza.all.map {|p| [p.name ,p.id]} %>
+    <%= f.label :Size %>
+    <%= f.select :size, Pizza::SIZES.keys %>
+    <%= f.label :Quantitiy %>
+    <%= f.number_field :quantity %>
+    <%= f.check_box :_destroy %>
+    <%= link_to_remove_association "Remove Item", f %>
+</div>
+<div>
+<p><strong>Ingredients:</strong></p>
+<div id="line_items">
+    <%= f.fields_for :ingredients_line_items do |ingredients_line_item| %>
+    <%= render 'ingredients_line_item_fields', f: ingredients_line_item %>
+    <% end %>
+    <div class="links">
+    <%= link_to_add_association 'Add Ingredient', f, :ingredients_line_items %>
+    </div>
+    <br><br>
+</div>
+</div>

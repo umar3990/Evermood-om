@@ -1,0 +1,39 @@
+<hr>
+<div class="row" id="<%= dom_id order %>">
+  <div class="column">
+  <p>Id: <%= order.number %> </p>
+  <p>Created: <%= order.created_at.to_formatted_s(:long) %> </p>
+  
+
+  <%unless order.discounts.present? %>
+  <p>Discount codes: -</p>
+  <% end %>
+  <p>Promotions codes: </p>
+  <% order.discounts.each do |d| %>
+    <p><%= d.code %></p>
+  <% end%>
+
+
+  <p>
+    <strong>Total Price:</strong>
+    <%= order.amount %>$
+  </p>
+
+  </div>
+  <div class="column">
+    <h3>Items:</h3>
+    <ul>
+    <% order.line_items.each do |l_item|%>
+      <li><%= "#{l_item.pizza.name}(#{l_item.size})"%>
+      <ul>
+      <li>Add: Todo</li>
+      <li>Remove: Todo</li>
+      </ul>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+
+</div>
+
